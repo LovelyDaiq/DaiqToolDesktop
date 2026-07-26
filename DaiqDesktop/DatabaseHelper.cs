@@ -6,7 +6,8 @@ namespace DaiqDesktop
 {
     public static class DatabaseHelper
     {
-        private const string ConnectionString = "Server=82.156.232.142;Port=3306;Database=selogin;Uid=selogin;Pwd=daiqnbnb;Charset=utf8mb4;SslMode=none;";
+        private const string ConnectionString = "Server=[填写您的SQL服务器ip];Port=[请填写您的端口];Da
+            tabase=[填写您的数据库地址];Uid=[数据库用户名];Pwd=[数据库密码];Charset=utf8mb4;SslMode=none;";
 
         /// <summary>
         /// 验证用户登录
