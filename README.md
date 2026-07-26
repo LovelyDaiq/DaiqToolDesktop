@@ -1,3 +1,4 @@
 # DaiqToolDesktop
 这是一个C#(C Sharp)的桌面工具
 使用Kimi AI协助完成该内容
+我可以保证我的文件没有任何病毒，电脑出事别找我
