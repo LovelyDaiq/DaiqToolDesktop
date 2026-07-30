@@ -171,12 +171,6 @@ namespace DaiqDesktop
             btnStart.Enabled = true;
             btnStart.Text = "▶ 开始游戏";
 
-            if (score > 0)
-            {
-                DatabaseHelper.SubmitScore(Program.CurrentUserId, Program.CurrentUsername ?? "", score);
-                int best = DatabaseHelper.GetUserBestScore(Program.CurrentUserId);
-                lblBest.Text = $"最佳: {best}";
-            }
 
             lblFinalScore.Text = $"最终分数: {score}";
             lblFinalScore.ForeColor = isWin ? Color.FromArgb(0, 219, 222) : Color.FromArgb(255, 107, 107);
@@ -188,27 +182,21 @@ namespace DaiqDesktop
             panelGameOver.BringToFront();
         }
 
-        private void BtnLeaderboard_Click(object sender, EventArgs e)
-        {
-            var leaderboard = DatabaseHelper.GetLeaderboard();
-            var form = new LeaderboardForm(leaderboard);
-            form.ShowDialog(this);
-        }
 
-        private void BtnLogout_Click(object sender, EventArgs e)
-        {
-            if (MessageBox.Show("确定要退出登录吗？", "确认", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-            {
-                gameTimer?.Stop();
-                Program.CurrentUsername = null;
-                Program.CurrentUserId = 0;
-                this.Close();
-            }
-        }
 
         private void Form2_FormClosing(object sender, FormClosingEventArgs e)
         {
             gameTimer?.Stop();
+        }
+
+        private void panelGameOver_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void lblHelp_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

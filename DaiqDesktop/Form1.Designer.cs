@@ -32,8 +32,8 @@
             label1 = new Label();
             button2 = new Button();
             button3 = new Button();
-            button4 = new Button();
             label2 = new Label();
+            GitHub = new Button();
             SuspendLayout();
             // 
             // button1
@@ -68,40 +68,40 @@
             // 
             // button3
             // 
-            button3.Location = new Point(2, 44);
+            button3.Location = new Point(2, 27);
             button3.Name = "button3";
             button3.Size = new Size(129, 39);
             button3.TabIndex = 4;
-            button3.Text = "贪吃蛇";
+            button3.Text = "小游戏列表";
             button3.UseVisualStyleBackColor = true;
             button3.Click += button3_Click;
-            // 
-            // button4
-            // 
-            button4.Location = new Point(713, 12);
-            button4.Name = "button4";
-            button4.Size = new Size(75, 23);
-            button4.TabIndex = 5;
-            button4.Text = "登录/注册";
-            button4.UseVisualStyleBackColor = true;
-            button4.Click += button4_Click;
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(9, 15);
+            label2.Location = new Point(9, 7);
             label2.Name = "label2";
-            label2.Size = new Size(68, 17);
+            label2.Size = new Size(61, 17);
             label2.TabIndex = 6;
-            label2.Text = "小游戏列表";
+            label2.Text = "休闲/娱乐";
+            // 
+            // GitHub
+            // 
+            GitHub.Location = new Point(164, 426);
+            GitHub.Name = "GitHub";
+            GitHub.Size = new Size(75, 23);
+            GitHub.TabIndex = 9;
+            GitHub.Text = "GitHub";
+            GitHub.UseVisualStyleBackColor = true;
+            GitHub.Click += button5_Click;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 17F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(GitHub);
             Controls.Add(label2);
-            Controls.Add(button4);
             Controls.Add(button3);
             Controls.Add(button2);
             Controls.Add(label1);
@@ -121,7 +121,7 @@
         private Label label1;
         private Button button2;
         private Button button3;
-        private Button button4;
         private Label label2;
+        private Button GitHub;
     }
 }

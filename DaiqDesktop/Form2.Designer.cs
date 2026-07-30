@@ -32,23 +32,20 @@
             lblTarget = new Label();
             lblBest = new Label();
             lblScore = new Label();
-            lblUser = new Label();
             lblTitle = new Label();
             canvas = new PictureBox();
-            panelRight = new Panel();
-            btnLogout = new Button();
-            btnLeaderboard = new Button();
-            btnStart = new Button();
-            lblHelp = new Label();
             panelGameOver = new Panel();
             btnBack = new Button();
             btnRestart = new Button();
             lblFinalScore = new Label();
             lblGameOverTitle = new Label();
+            lblHelp = new Label();
+            btnStart = new Button();
+            panelRight = new Panel();
             panelTop.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)canvas).BeginInit();
-            panelRight.SuspendLayout();
             panelGameOver.SuspendLayout();
+            panelRight.SuspendLayout();
             SuspendLayout();
             // 
             // panelTop
@@ -57,11 +54,10 @@
             panelTop.Controls.Add(lblTarget);
             panelTop.Controls.Add(lblBest);
             panelTop.Controls.Add(lblScore);
-            panelTop.Controls.Add(lblUser);
             panelTop.Controls.Add(lblTitle);
             panelTop.Dock = DockStyle.Top;
             panelTop.Location = new Point(0, 0);
-            panelTop.Margin = new Padding(4, 4, 4, 4);
+            panelTop.Margin = new Padding(4);
             panelTop.Name = "panelTop";
             panelTop.Size = new Size(1031, 85);
             panelTop.TabIndex = 0;
@@ -102,18 +98,6 @@
             lblScore.TabIndex = 2;
             lblScore.Text = "分数: 0";
             // 
-            // lblUser
-            // 
-            lblUser.AutoSize = true;
-            lblUser.Font = new Font("微软雅黑", 12F, FontStyle.Regular, GraphicsUnit.Point, 134);
-            lblUser.ForeColor = Color.FromArgb(150, 219, 222);
-            lblUser.Location = new Point(373, 28);
-            lblUser.Margin = new Padding(4, 0, 4, 0);
-            lblUser.Name = "lblUser";
-            lblUser.Size = new Size(34, 21);
-            lblUser.TabIndex = 1;
-            lblUser.Text = "👤 ";
-            // 
             // lblTitle
             // 
             lblTitle.AutoSize = true;
@@ -122,96 +106,21 @@
             lblTitle.Location = new Point(23, 21);
             lblTitle.Margin = new Padding(4, 0, 4, 0);
             lblTitle.Name = "lblTitle";
-            lblTitle.Size = new Size(86, 31);
+            lblTitle.Size = new Size(134, 31);
             lblTitle.TabIndex = 0;
-            lblTitle.Text = "贪吃蛇";
+            lblTitle.Text = "神秘贪吃蛇";
             // 
             // canvas
             // 
             canvas.BackColor = Color.FromArgb(15, 52, 96);
             canvas.BorderStyle = BorderStyle.Fixed3D;
             canvas.Location = new Point(23, 113);
-            canvas.Margin = new Padding(4, 4, 4, 4);
+            canvas.Margin = new Padding(4);
             canvas.Name = "canvas";
             canvas.Size = new Size(699, 848);
             canvas.TabIndex = 1;
             canvas.TabStop = false;
             canvas.Paint += Canvas_Paint;
-            // 
-            // panelRight
-            // 
-            panelRight.BackColor = Color.FromArgb(22, 33, 62);
-            panelRight.Controls.Add(btnLogout);
-            panelRight.Controls.Add(btnLeaderboard);
-            panelRight.Controls.Add(btnStart);
-            panelRight.Controls.Add(lblHelp);
-            panelRight.Location = new Point(747, 113);
-            panelRight.Margin = new Padding(4, 4, 4, 4);
-            panelRight.Name = "panelRight";
-            panelRight.Size = new Size(257, 850);
-            panelRight.TabIndex = 2;
-            // 
-            // btnLogout
-            // 
-            btnLogout.BackColor = Color.FromArgb(255, 107, 107);
-            btnLogout.Cursor = Cursors.Hand;
-            btnLogout.FlatAppearance.BorderSize = 0;
-            btnLogout.FlatStyle = FlatStyle.Flat;
-            btnLogout.Font = new Font("微软雅黑", 12F, FontStyle.Regular, GraphicsUnit.Point, 134);
-            btnLogout.ForeColor = Color.White;
-            btnLogout.Location = new Point(18, 510);
-            btnLogout.Margin = new Padding(4, 4, 4, 4);
-            btnLogout.Name = "btnLogout";
-            btnLogout.Size = new Size(222, 64);
-            btnLogout.TabIndex = 3;
-            btnLogout.Text = "退出登录";
-            btnLogout.UseVisualStyleBackColor = false;
-            btnLogout.Click += BtnLogout_Click;
-            // 
-            // btnLeaderboard
-            // 
-            btnLeaderboard.BackColor = Color.FromArgb(102, 126, 234);
-            btnLeaderboard.Cursor = Cursors.Hand;
-            btnLeaderboard.FlatAppearance.BorderSize = 0;
-            btnLeaderboard.FlatStyle = FlatStyle.Flat;
-            btnLeaderboard.Font = new Font("微软雅黑", 12F, FontStyle.Bold, GraphicsUnit.Point, 134);
-            btnLeaderboard.ForeColor = Color.White;
-            btnLeaderboard.Location = new Point(18, 425);
-            btnLeaderboard.Margin = new Padding(4, 4, 4, 4);
-            btnLeaderboard.Name = "btnLeaderboard";
-            btnLeaderboard.Size = new Size(222, 64);
-            btnLeaderboard.TabIndex = 2;
-            btnLeaderboard.Text = "排行榜";
-            btnLeaderboard.UseVisualStyleBackColor = false;
-            btnLeaderboard.Click += BtnLeaderboard_Click;
-            // 
-            // btnStart
-            // 
-            btnStart.BackColor = Color.FromArgb(0, 184, 148);
-            btnStart.Cursor = Cursors.Hand;
-            btnStart.FlatAppearance.BorderSize = 0;
-            btnStart.FlatStyle = FlatStyle.Flat;
-            btnStart.Font = new Font("微软雅黑", 14F, FontStyle.Bold, GraphicsUnit.Point, 134);
-            btnStart.ForeColor = Color.White;
-            btnStart.Location = new Point(18, 340);
-            btnStart.Margin = new Padding(4, 4, 4, 4);
-            btnStart.Name = "btnStart";
-            btnStart.Size = new Size(222, 64);
-            btnStart.TabIndex = 1;
-            btnStart.Text = "开始游戏";
-            btnStart.UseVisualStyleBackColor = false;
-            btnStart.Click += BtnStart_Click;
-            // 
-            // lblHelp
-            // 
-            lblHelp.Font = new Font("微软雅黑", 11F, FontStyle.Regular, GraphicsUnit.Point, 134);
-            lblHelp.ForeColor = Color.White;
-            lblHelp.Location = new Point(18, 28);
-            lblHelp.Margin = new Padding(4, 0, 4, 0);
-            lblHelp.Name = "lblHelp";
-            lblHelp.Size = new Size(222, 283);
-            lblHelp.TabIndex = 0;
-            lblHelp.Text = "🎮 操作说明\n\n↑ ↓ ← → 方向键\n控制蛇移动\n\n空格键 暂停/继续\n\n吃到红色食物得分\n达到50分获胜！";
             // 
             // panelGameOver
             // 
@@ -221,11 +130,12 @@
             panelGameOver.Controls.Add(lblFinalScore);
             panelGameOver.Controls.Add(lblGameOverTitle);
             panelGameOver.Location = new Point(23, 113);
-            panelGameOver.Margin = new Padding(4, 4, 4, 4);
+            panelGameOver.Margin = new Padding(4);
             panelGameOver.Name = "panelGameOver";
             panelGameOver.Size = new Size(700, 850);
             panelGameOver.TabIndex = 3;
             panelGameOver.Visible = false;
+            panelGameOver.Paint += panelGameOver_Paint;
             // 
             // btnBack
             // 
@@ -236,7 +146,7 @@
             btnBack.Font = new Font("微软雅黑", 12F, FontStyle.Regular, GraphicsUnit.Point, 134);
             btnBack.ForeColor = Color.White;
             btnBack.Location = new Point(362, 453);
-            btnBack.Margin = new Padding(4, 4, 4, 4);
+            btnBack.Margin = new Padding(4);
             btnBack.Name = "btnBack";
             btnBack.Size = new Size(163, 64);
             btnBack.TabIndex = 3;
@@ -252,7 +162,7 @@
             btnRestart.Font = new Font("微软雅黑", 12F, FontStyle.Bold, GraphicsUnit.Point, 134);
             btnRestart.ForeColor = Color.White;
             btnRestart.Location = new Point(175, 453);
-            btnRestart.Margin = new Padding(4, 4, 4, 4);
+            btnRestart.Margin = new Padding(4);
             btnRestart.Name = "btnRestart";
             btnRestart.Size = new Size(163, 64);
             btnRestart.TabIndex = 2;
@@ -283,6 +193,46 @@
             lblGameOverTitle.TabIndex = 0;
             lblGameOverTitle.Text = "游戏结束";
             // 
+            // lblHelp
+            // 
+            lblHelp.Font = new Font("微软雅黑", 11F, FontStyle.Regular, GraphicsUnit.Point, 134);
+            lblHelp.ForeColor = Color.White;
+            lblHelp.Location = new Point(11, 78);
+            lblHelp.Margin = new Padding(4, 0, 4, 0);
+            lblHelp.Name = "lblHelp";
+            lblHelp.Size = new Size(222, 105);
+            lblHelp.TabIndex = 0;
+            lblHelp.Text = "神秘贪吃蛇 规则不用我说吧";
+            lblHelp.Click += lblHelp_Click;
+            // 
+            // btnStart
+            // 
+            btnStart.BackColor = Color.FromArgb(0, 184, 148);
+            btnStart.Cursor = Cursors.Hand;
+            btnStart.FlatAppearance.BorderSize = 0;
+            btnStart.FlatStyle = FlatStyle.Flat;
+            btnStart.Font = new Font("微软雅黑", 14F, FontStyle.Bold, GraphicsUnit.Point, 134);
+            btnStart.ForeColor = Color.White;
+            btnStart.Location = new Point(16, 157);
+            btnStart.Margin = new Padding(4);
+            btnStart.Name = "btnStart";
+            btnStart.Size = new Size(222, 64);
+            btnStart.TabIndex = 1;
+            btnStart.Text = "开始游戏";
+            btnStart.UseVisualStyleBackColor = false;
+            btnStart.Click += BtnStart_Click;
+            // 
+            // panelRight
+            // 
+            panelRight.BackColor = Color.FromArgb(22, 33, 62);
+            panelRight.Controls.Add(btnStart);
+            panelRight.Controls.Add(lblHelp);
+            panelRight.Location = new Point(746, 314);
+            panelRight.Margin = new Padding(4);
+            panelRight.Name = "panelRight";
+            panelRight.Size = new Size(257, 256);
+            panelRight.TabIndex = 2;
+            // 
             // Form2
             // 
             AutoScaleDimensions = new SizeF(7F, 17F);
@@ -294,7 +244,7 @@
             Controls.Add(canvas);
             Controls.Add(panelTop);
             FormBorderStyle = FormBorderStyle.FixedSingle;
-            Margin = new Padding(4, 4, 4, 4);
+            Margin = new Padding(4);
             MaximizeBox = false;
             Name = "Form2";
             ShowIcon = false;
@@ -304,9 +254,9 @@
             panelTop.ResumeLayout(false);
             panelTop.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)canvas).EndInit();
-            panelRight.ResumeLayout(false);
             panelGameOver.ResumeLayout(false);
             panelGameOver.PerformLayout();
+            panelRight.ResumeLayout(false);
             ResumeLayout(false);
 
         }
@@ -315,20 +265,17 @@
 
         private System.Windows.Forms.Panel panelTop;
         private System.Windows.Forms.Label lblTitle;
-        private System.Windows.Forms.Label lblUser;
         private System.Windows.Forms.Label lblScore;
         private System.Windows.Forms.Label lblBest;
         private System.Windows.Forms.Label lblTarget;
         private System.Windows.Forms.PictureBox canvas;
-        private System.Windows.Forms.Panel panelRight;
-        private System.Windows.Forms.Label lblHelp;
-        private System.Windows.Forms.Button btnStart;
-        private System.Windows.Forms.Button btnLeaderboard;
-        private System.Windows.Forms.Button btnLogout;
         private System.Windows.Forms.Panel panelGameOver;
         private System.Windows.Forms.Label lblGameOverTitle;
         private System.Windows.Forms.Label lblFinalScore;
         private System.Windows.Forms.Button btnRestart;
         private System.Windows.Forms.Button btnBack;
+        private Label lblHelp;
+        private Button btnStart;
+        private Panel panelRight;
     }
 }
